@@ -23,6 +23,12 @@ These boundaries should make individual components easier to evolve, replace, se
 - Split public and private components into separate repositories later if security, operational, or product requirements justify it.
 - Avoid coupling public code to private Ada context or confidential EVH Consult information.
 
+## Current website implementation
+
+The first public website is a statically exported Next.js application in `src/web`. Static output keeps the first deployment simple and portable. Analytics is injected only when public deployment settings provide a domain and script URL; no tracking identifier is hard-coded.
+
+This implementation does not determine the future backend architecture.
+
 ## Likely evolution
 
 The current likely path is:

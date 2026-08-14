@@ -12,4 +12,12 @@ This document states the initial public privacy and data-handling principles for
 - Document specific external AI providers and their processing arrangements before using them in production.
 - Evaluate privacy and security requirements before introducing user accounts, document uploads, persistent conversations, or client data.
 
+## Audience measurement
+
+The website is prepared for minimal, cookie-free audience measurement. The intended scope is aggregate page views, referral sources, broad device classes, and country-level geography. It excludes advertising identifiers, cross-site profiles, keystroke capture, document contents, and persistent visitor histories.
+
+The initial recommended provider is Plausible Analytics because its hosted service is EU-based, does not use cookies or persistent identifiers, and states that raw IP addresses and User-Agent values are not stored. Provider configuration and the final production data-handling assessment must be completed before tracking is enabled.
+
+See [`analytics.md`](analytics.md) for implementation details.
+
 Any future implementation should apply privacy and security controls proportionate to the data involved and the risks created by the service.

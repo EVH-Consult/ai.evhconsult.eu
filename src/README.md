@@ -1,5 +1,7 @@
 # Application source
 
-This directory is reserved for the future application source code for `ai.evhconsult.eu`.
+The current mini website lives in [`web`](web).
 
-No framework has been selected yet. The first implementation may be a simple static site. Technology choices should follow actual functional, security, operational, and maintenance requirements rather than prematurely locking the project into a framework.
+It is a statically exported Next.js application selected for a simple, portable first deployment. The implementation does not determine the technology for future APIs, authenticated services, or AI-provider integrations.
+
+Technology choices should continue to follow actual functional, security, operational, and maintenance requirements rather than prematurely locking the project into a framework.
