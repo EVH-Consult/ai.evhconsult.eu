@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "AI at EVH Consult",
   description: "EVH Consult's public space for practical, portable and responsible AI experimentation.",
   other: { "codex-preview": "development" },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: { icon: "/evh-consult-mark.svg", shortcut: "/evh-consult-mark.svg", apple: "/evh-consult-mark.svg" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

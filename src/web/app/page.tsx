@@ -11,8 +11,9 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="AI at EVH Consult home">
-          <span className="brand-mark" aria-hidden="true">A</span>
-          <span><strong>AI</strong><small>EVH Consult</small></span>
+          <img src="/evh-consult-logo.svg" alt="EVH Consult" />
+          <span className="brand-divider" aria-hidden="true" />
+          <span className="brand-ai">AI</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">What we explore</a><a href="#ada">Meet Ada</a><a href="#privacy">Privacy</a>
@@ -98,7 +99,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand footer-brand" href="#top" aria-label="Back to top"><span className="brand-mark" aria-hidden="true">A</span><span><strong>AI</strong><small>EVH Consult</small></span></a>
+        <a className="brand footer-brand" href="#top" aria-label="Back to top"><img src="/evh-consult-logo.svg" alt="EVH Consult" /><span className="brand-divider" aria-hidden="true" /><span className="brand-ai">AI</span></a>
         <p>© {new Date().getFullYear()} EVH Consult. Built in public, operated responsibly.</p>
         <div><a href="https://evhconsult.eu">EVH Consult</a><a href="https://github.com/EVH-Consult/ai.evhconsult.eu">GitHub</a><a href="mailto:ai@evhconsult.eu">Contact</a></div>
       </footer>
