@@ -25,11 +25,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const analyticsDomain = process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN;
-  const analyticsScript = process.env.NEXT_PUBLIC_ANALYTICS_SCRIPT;
   return (
     <html lang="en">
-      <head>{analyticsDomain && analyticsScript ? <script defer data-domain={analyticsDomain} src={analyticsScript} /> : null}</head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
     </html>
   );

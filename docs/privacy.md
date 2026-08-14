@@ -12,12 +12,20 @@ This document states the initial public privacy and data-handling principles for
 - Document specific external AI providers and their processing arrangements before using them in production.
 - Evaluate privacy and security requirements before introducing user accounts, document uploads, persistent conversations, or client data.
 
-## Audience measurement
+## Basic service measurement
 
-The website is prepared for minimal, cookie-free audience measurement. The intended scope is aggregate page views, referral sources, broad device classes, and country-level geography. It excludes advertising identifiers, cross-site profiles, keystroke capture, document contents, and persistent visitor histories.
+No dedicated audience-analytics provider or client-side analytics script is enabled.
 
-The initial recommended provider is Plausible Analytics because its hosted service is EU-based, does not use cookies or persistent identifiers, and states that raw IP addresses and User-Agent values are not stored. Provider configuration and the final production data-handling assessment must be completed before tracking is enabled.
+The project uses only the aggregate operational metrics already produced by Azure Static Web Apps as the hosting platform:
 
-See [`analytics.md`](analytics.md) for implementation details.
+- total site hits;
+- outgoing bytes;
+- site errors.
 
-Any future implementation should apply privacy and security controls proportionate to the data involved and the risks created by the service.
+These counters help determine whether the site is being reached and operating normally. They are request-level service metrics, not a count of unique people, and they do not provide referral sources, device profiles or visitor-level histories.
+
+No audience-measurement cookies are set by this project. No separate analytics account receives the website's traffic data.
+
+See [`analytics.md`](analytics.md) for implementation details and limitations.
+
+Any future expansion of measurement must be documented and evaluated before activation. This is especially important before adding accounts, uploads, conversations or client data.

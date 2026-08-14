@@ -1,48 +1,34 @@
-# Minimal audience measurement
+# Minimal service measurement
 
-The website supports optional, privacy-friendly audience measurement. Tracking remains disabled unless deployment settings provide both the analytics domain and script URL.
+## Current decision
 
-## Intended initial provider
+The project does not use a dedicated audience-analytics provider.
 
-The initial recommendation is Plausible Analytics:
+No client-side analytics script, tracking token, advertising identifier, session replay or audience-measurement cookie is included in the production website.
 
-- hosted in the EU;
-- no analytics cookies;
-- no persistent visitor identifier;
-- aggregate traffic reporting;
-- open-source software and a documented data policy.
+## Available measurement
 
-This is a recommendation, not an architectural dependency. The integration is configured through environment variables and can be replaced or removed without changing the page content.
+Azure Static Web Apps already produces aggregate operational metrics as part of hosting the site. The relevant counters are:
 
-## Configuration
+- `SiteHits`: requests reaching the website;
+- `BytesSent`: outgoing traffic volume;
+- `SiteErrors`: website errors.
 
-Set these public build-time values in the deployment environment:
+They can be viewed in the Azure portal under the Static Web App's monitoring metrics.
 
-```text
-NEXT_PUBLIC_ANALYTICS_DOMAIN=ai.evhconsult.eu
-NEXT_PUBLIC_ANALYTICS_SCRIPT=https://plausible.io/js/script.js
-```
+## Limitations
 
-The domain must first be registered in the selected analytics service. Do not add account credentials, API keys, or private tokens to the repository.
+A site hit is not the same as a person or a page view. Requests for assets, automated traffic and repeat requests can contribute to the count. These metrics do not show unique visitors, referral sources, browser or device classes, geography, journeys or conversions.
 
-## Measurement boundaries
+That limitation is intentional for the initial site: it provides a basic indication of use and service health without introducing another processor, account, subscription or browser-side tracking mechanism.
 
-The initial configuration should measure only:
+## Future changes
 
-- page views;
-- entry and exit pages;
-- referral-source categories;
-- broad browser, operating-system, and device classes;
-- country-level geography.
+Before adding any external analytics service, document:
 
-Do not enable session replay, advertising integration, cross-site tracking, document-content capture, or user-level profiles.
-
-## Production checklist
-
-Before enabling analytics:
-
-1. Confirm the provider, account owner, hosting region, retention settings, and applicable processing terms.
-2. Verify that the public privacy information matches the actual configuration.
-3. Configure internal-traffic exclusion where practical.
-4. Confirm the production page sends events only to the documented endpoint.
-5. Review the arrangement again before adding accounts, uploads, conversations, or client data.
+1. why the additional information is necessary;
+2. the provider and processing location;
+3. retention and deletion arrangements;
+4. cookies, identifiers and browser-side data sent;
+5. cost and operational dependency;
+6. the required changes to the public privacy information.

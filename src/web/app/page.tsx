@@ -78,13 +78,13 @@ export default function Home() {
           <h2>Useful signals.<br />No surveillance.</h2>
         </div>
         <div className="privacy-content">
-          <p>We want to know whether people find this site and which pages prove useful. We do not need to know who you are to learn that.</p>
+          <p>We use only the aggregate operational counters already produced by our Azure hosting platform. No separate audience analytics service is enabled.</p>
           <ul>
-            <li><span>Collected</span>Anonymous page views, referrer category, broad device type and country-level region.</li>
-            <li><span>Not collected</span>Advertising identifiers, cross-site profiles, keystrokes, document contents or persistent visitor histories.</li>
-            <li><span>Cookies</span>None for audience measurement.</li>
+            <li><span>Measured</span>Aggregate site hits, transferred bytes and service errors.</li>
+            <li><span>Not measured</span>Unique visitors, referral sources, device profiles, location, advertising identifiers or persistent visitor histories.</li>
+            <li><span>Browser tracking</span>No analytics script and no audience-measurement cookies.</li>
           </ul>
-          <p className="privacy-note">Privacy-friendly analytics can be enabled through deployment settings; the site does not contain a hard-coded tracking token.</p>
+          <p className="privacy-note">These basic service metrics show whether the site is being reached; they do not identify individual visitors.</p>
           <a href="https://github.com/EVH-Consult/ai.evhconsult.eu/blob/main/docs/privacy.md">Read the data-handling principles ↗</a>
         </div>
       </section>
