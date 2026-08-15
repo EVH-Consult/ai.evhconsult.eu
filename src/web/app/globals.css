@@ -156,3 +156,7 @@ body.nav-open{overflow:hidden}
   .header-inner{min-height:70px}
   .site-footer .footer-links{flex-direction:column;gap:12px}
 }
+
+/* Canonical transparent logo containment */
+.site-header .brand img{width:172px;height:56px;object-fit:contain}
+.site-footer .footer-brand img{width:132px;height:46px;object-fit:contain}
