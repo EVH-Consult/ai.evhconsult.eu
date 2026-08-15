@@ -160,3 +160,12 @@ body.nav-open{overflow:hidden}
 /* Canonical transparent logo containment */
 .site-header .brand img{width:172px;height:56px;object-fit:contain}
 .site-footer .footer-brand img{width:132px;height:46px;object-fit:contain}
+
+
+/* Header logo scale, alignment and viewport-safe mobile navigation */
+.site-header .brand{margin-left:12px}
+.site-header .brand img{width:196px;height:64px;object-fit:contain}
+@media(max-width:900px){
+  .site-header{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .site-header .site-nav{min-height:100dvh}
+}
