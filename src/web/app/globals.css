@@ -10,6 +10,7 @@
   --copper-light: #ff8a43;
   --teal: #16a9c5;
   --line: #dce2e5;
+  --container: 1180px;
 }
 
 * {
@@ -22,10 +23,12 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--white);
   color: var(--ink);
   font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -102,11 +105,11 @@ a {
 
 .hero {
   position: relative;
-  min-height: 790px;
-  padding: 180px clamp(24px, 7vw, 110px) 100px;
+  min-height: 0;
+  padding: 168px max(20px, calc((100% - var(--container)) / 2)) 90px;
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, .65fr);
-  gap: 8vw;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
+  gap: clamp(50px, 8vw, 110px);
   align-items: center;
   overflow: hidden;
   background: var(--navy);
@@ -140,14 +143,14 @@ a {
 }
 
 .eyebrow {
-  margin: 0 0 28px;
+  margin: 0 0 18px;
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .15em;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--copper);
 }
@@ -165,11 +168,11 @@ a {
 
 .hero h1 {
   margin: 0;
-  max-width: 940px;
-  font-size: clamp(54px, 6.8vw, 104px);
-  line-height: .96;
-  letter-spacing: -.065em;
-  font-weight: 520;
+  max-width: 850px;
+  font-size: clamp(3rem, 5.7vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+  font-weight: 680;
 }
 
 .hero h1 em {
@@ -179,15 +182,15 @@ a {
 }
 
 .hero-intro {
-  max-width: 680px;
-  margin: 38px 0 0;
-  font-size: clamp(17px, 1.6vw, 21px);
+  max-width: 720px;
+  margin: 28px 0 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.26rem);
   line-height: 1.65;
-  color: rgba(255, 253, 248, .7);
+  color: #b9c8d3;
 }
 
 .hero-actions {
-  margin-top: 42px;
+  margin-top: 36px;
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
@@ -195,13 +198,13 @@ a {
 }
 
 .button {
-  min-height: 52px;
+  min-height: 50px;
   padding: 0 24px;
   display: inline-flex;
   align-items: center;
   gap: 24px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: .9rem;
+  font-weight: 700;
   transition: transform .2s ease, background .2s ease, color .2s ease;
 }
 
@@ -315,8 +318,11 @@ a {
 /* Principles strip */
 
 .principles {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: var(--white);
 }
@@ -345,37 +351,38 @@ a {
 /* Content sections */
 
 .section {
-  padding: 130px clamp(24px, 7vw, 110px);
+  padding: 105px max(20px, calc((100% - var(--container)) / 2));
 }
 
 .work {
   display: grid;
   grid-template-columns: .8fr 1.2fr;
-  column-gap: 8vw;
-  background: var(--paper);
+  column-gap: 60px;
+  background: var(--white);
 }
 
 .section-heading h2 {
   margin: 0;
+  color: var(--navy);
   font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: clamp(47px, 5vw, 76px);
-  line-height: 1.04;
-  letter-spacing: -.04em;
-  font-weight: 400;
+  font-size: clamp(2.15rem, 3.8vw, 3.8rem);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  font-weight: 650;
 }
 
 .section-lead {
-  margin: 54px 0 0;
-  max-width: 700px;
-  font-size: clamp(19px, 2vw, 27px);
-  line-height: 1.55;
-  letter-spacing: -.02em;
+  margin: 28px 0 0;
+  max-width: 620px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  letter-spacing: 0;
   color: var(--ink-soft);
 }
 
 .capability-grid {
   grid-column: 1/-1;
-  margin-top: 110px;
+  margin-top: 56px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--line);
@@ -403,16 +410,17 @@ a {
 }
 
 .capability h3 {
-  margin: 80px 0 18px;
-  font-size: 27px;
-  font-weight: 560;
+  margin: 52px 0 16px;
+  color: var(--navy);
+  font-size: 1.42rem;
+  font-weight: 650;
 }
 
 .capability p {
   margin: 0;
   max-width: 330px;
   color: var(--ink-soft);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .capability-line {
@@ -435,7 +443,7 @@ a {
   min-height: 720px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 9vw;
+  gap: 90px;
   align-items: center;
   background: var(--navy-deep);
   color: var(--white);
@@ -483,20 +491,22 @@ a {
 
 .ada-copy h2 {
   margin: 0;
-  font: 400 clamp(58px, 6vw, 88px)/1 Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--white);
+  font: 650 clamp(2.15rem, 3.8vw, 3.8rem)/1.12 Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  letter-spacing: -.035em;
 }
 
 .ada-intro {
-  margin: 30px 0 24px!important;
+  margin: 28px 0 20px!important;
   color: var(--copper-light)!important;
-  font-size: 22px!important;
+  font-size: 1.05rem!important;
 }
 
 .ada-copy>p {
   max-width: 610px;
-  color: rgba(255, 253, 248, .65);
-  font-size: 16px;
-  line-height: 1.75;
+  color: #b9c8d3;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .ada-copy>a, .privacy-content>a {
@@ -513,14 +523,14 @@ a {
 .privacy {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
-  gap: 10vw;
-  background: var(--white);
+  gap: 90px;
+  background: var(--paper);
 }
 
 .privacy-content>p:first-child {
-  margin: 52px 0 36px;
-  font-size: 21px;
-  line-height: 1.6;
+  margin: 28px 0 36px;
+  font-size: 1.05rem;
+  line-height: 1.65;
   color: var(--ink-soft);
 }
 
@@ -538,8 +548,8 @@ a {
   gap: 24px;
   border-bottom: 1px solid var(--line);
   color: var(--ink-soft);
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: .94rem;
+  line-height: 1.65;
 }
 
 .privacy-content li span {
@@ -561,7 +571,7 @@ a {
 /* Closing call to action */
 
 .closing {
-  padding: 110px clamp(24px, 7vw, 110px);
+  padding: 105px max(20px, calc((100% - var(--container)) / 2));
   background: var(--copper);
   color: var(--white);
 }
@@ -572,8 +582,8 @@ a {
 
 .closing h2 {
   margin: 0;
-  max-width: 1000px;
-  font: 400 clamp(48px, 6vw, 88px)/1.05 Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  max-width: 850px;
+  font: 650 clamp(2.15rem, 3.8vw, 3.8rem)/1.12 Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   letter-spacing: -.035em;
 }
 
@@ -664,7 +674,7 @@ footer a:hover {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
-    padding-top: 155px;
+    padding-top: 168px;
   }
 
   .signal-card {
@@ -693,11 +703,11 @@ footer a:hover {
   }
 
   .section-lead {
-    margin-top: 36px;
+    margin-top: 28px;
   }
 
   .capability-grid {
-    margin-top: 70px;
+    margin-top: 56px;
   }
 
   .ada {
@@ -710,7 +720,7 @@ footer a:hover {
 
 }
 
-@media (max-width:620px) {
+@media (max-width:680px) {
   .site-header {
     height: 76px;
   }
@@ -725,11 +735,11 @@ footer a:hover {
   }
 
   .hero {
-    padding-top: 130px;
+    padding: 132px 16px 70px;
   }
 
   .hero h1 {
-    font-size: clamp(48px, 15vw, 72px);
+    font-size: clamp(2.55rem, 12.5vw, 4rem);
   }
 
   .hero-actions {
@@ -748,8 +758,15 @@ footer a:hover {
   }
 
   .section {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding: 76px 16px;
+  }
+
+  .principles {
+    width: calc(100% - 32px);
+  }
+
+  .closing {
+    padding: 76px 16px;
   }
 
   .capability-grid {
@@ -830,7 +847,7 @@ body.nav-open {
 }
 
 .site-container {
-  width: min(calc(100% - 40px), 1180px);
+  width: min(calc(100% - 40px), var(--container));
   margin-inline: auto;
 }
 
@@ -1060,7 +1077,7 @@ body.nav-open {
 
 @media(max-width:680px) {
   .site-container {
-    width: min(calc(100% - 32px), 1180px);
+    width: min(calc(100% - 32px), var(--container));
   }
 
   .header-inner {
