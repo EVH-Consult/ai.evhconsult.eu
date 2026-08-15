@@ -1,3 +1,5 @@
+import SiteNavigation from "./site-navigation";
+
 const capabilities = [
   { index: "01", title: "Explore", text: "Test emerging AI capabilities against real technical questions—not demos for their own sake." },
   { index: "02", title: "Engineer", text: "Turn useful ideas into portable tools, clear integrations, and maintainable services." },
@@ -10,15 +12,14 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="AI at EVH Consult home">
-          <img src="/evh-consult-logo-transparent.png" alt="EVH Consult" />
-          <span className="brand-divider" aria-hidden="true" />
-          <span className="brand-ai">AI</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#work">What we explore</a><a href="#ada">Meet Ada</a><a href="#privacy">Privacy</a>
-        </nav>
-        <a className="header-link" href="https://evhconsult.eu">EVH Consult ↗</a>
+        <div className="site-container header-inner">
+          <a className="brand" href="#top" aria-label="AI at EVH Consult home">
+            <img src="https://evhconsult.eu/assets/evh-consult-logo.png" alt="EVH Consult" width="851" height="315" />
+            <span className="brand-divider" aria-hidden="true" />
+            <span className="brand-ai">AI</span>
+          </a>
+          <SiteNavigation />
+        </div>
       </header>
 
       <section className="hero" id="top">
@@ -98,10 +99,16 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <a className="brand footer-brand" href="#top" aria-label="Back to top"><img src="/evh-consult-logo-transparent.png" alt="EVH Consult" /><span className="brand-divider" aria-hidden="true" /><span className="brand-ai">AI</span></a>
-        <p>© {new Date().getFullYear()} EVH Consult. Built in public, operated responsibly.</p>
-        <div><a href="https://evhconsult.eu">EVH Consult</a><a href="https://github.com/EVH-Consult/ai.evhconsult.eu">GitHub</a><a href="mailto:ai@evhconsult.eu">Contact</a></div>
+      <footer className="site-footer">
+        <div className="site-container footer-inner">
+          <a className="footer-brand" href="#top" aria-label="AI at EVH Consult home">
+            <img src="https://evhconsult.eu/assets/evh-consult-logo.png" alt="EVH Consult" width="851" height="315" />
+            <span className="brand-divider" aria-hidden="true" />
+            <span className="brand-ai">AI</span>
+          </a>
+          <p>© {new Date().getFullYear()} EVH Consult. Built in public, operated responsibly.</p>
+          <div className="footer-links"><a href="https://evhconsult.eu">EVH Consult</a><a href="https://ada.evhconsult.eu">Ada</a><a href="https://github.com/EVH-Consult/ai.evhconsult.eu">GitHub</a><a href="mailto:ai@evhconsult.eu">Contact</a></div>
+        </div>
       </footer>
     </main>
   );
