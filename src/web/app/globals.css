@@ -1,4 +1,4 @@
-@import"tailwindcss";
+@import "tailwindcss";
 :root {
   --ink: #172442;
   --ink-soft: #5c6873;
@@ -24,7 +24,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -40,12 +40,12 @@ a {
   left: 0;
   right: 0;
   height: 90px;
-  padding: 0 clamp(24px,5vw,76px);
+  padding: 0 clamp(24px, 5vw, 76px);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   border-bottom: 1px solid var(--line);
-  background: rgba(255,255,255,.97);
+  background: rgba(255, 255, 255, .97);
   color: var(--ink);
 }
 
@@ -71,7 +71,7 @@ a {
 
 .brand-ai {
   color: var(--navy);
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 750;
   letter-spacing: .16em;
@@ -79,15 +79,15 @@ a {
 
 .site-header nav {
   display: flex;
-  gap: clamp(24px,4vw,52px);
+  gap: clamp(24px, 4vw, 52px);
   font-size: 13px;
 }
 
-.site-header nav a,.header-link {
+.site-header nav a, .header-link {
   transition: color .2s ease;
 }
 
-.site-header nav a:hover,.header-link:hover {
+.site-header nav a:hover, .header-link:hover {
   color: var(--copper);
 }
 
@@ -103,9 +103,9 @@ a {
 .hero {
   position: relative;
   min-height: 790px;
-  padding: 180px clamp(24px,7vw,110px) 100px;
+  padding: 180px clamp(24px, 7vw, 110px) 100px;
   display: grid;
-  grid-template-columns: minmax(0,1.35fr) minmax(320px,.65fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, .65fr);
   gap: 8vw;
   align-items: center;
   overflow: hidden;
@@ -121,7 +121,7 @@ a {
   right: -140px;
   top: 70px;
   border-radius: 50%;
-  background: radial-gradient(circle,rgba(239,100,18,.3),transparent 67%);
+  background: radial-gradient(circle, rgba(239, 100, 18, .3), transparent 67%);
   filter: blur(4px);
 }
 
@@ -129,12 +129,12 @@ a {
   position: absolute;
   inset: 0;
   opacity: .07;
-  background-image: linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, .5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .5) 1px, transparent 1px);
   background-size: 68px 68px;
-  mask-image: linear-gradient(90deg,transparent,black 35%,black);
+  mask-image: linear-gradient(90deg, transparent, black 35%, black);
 }
 
-.hero-copy,.signal-card {
+.hero-copy, .signal-card {
   position: relative;
   z-index: 1;
 }
@@ -144,7 +144,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: .15em;
@@ -166,7 +166,7 @@ a {
 .hero h1 {
   margin: 0;
   max-width: 940px;
-  font-size: clamp(54px,6.8vw,104px);
+  font-size: clamp(54px, 6.8vw, 104px);
   line-height: .96;
   letter-spacing: -.065em;
   font-weight: 520;
@@ -174,16 +174,16 @@ a {
 
 .hero h1 em {
   color: #ffab73;
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .hero-intro {
   max-width: 680px;
   margin: 38px 0 0;
-  font-size: clamp(17px,1.6vw,21px);
+  font-size: clamp(17px, 1.6vw, 21px);
   line-height: 1.65;
-  color: rgba(255,253,248,.7);
+  color: rgba(255, 253, 248, .7);
 }
 
 .hero-actions {
@@ -202,7 +202,7 @@ a {
   gap: 24px;
   font-size: 13px;
   font-weight: 600;
-  transition: transform .2s ease,background .2s ease,color .2s ease;
+  transition: transform .2s ease, background .2s ease, color .2s ease;
 }
 
 .button:hover {
@@ -220,7 +220,7 @@ a {
 
 .button-quiet {
   padding-inline: 8px;
-  color: rgba(255,253,248,.72);
+  color: rgba(255, 253, 248, .72);
 }
 
 .button-quiet:hover {
@@ -237,20 +237,20 @@ a {
 
 .signal-orbit {
   position: relative;
-  width: min(25vw,320px);
+  width: min(25vw, 320px);
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(255,138,67,.55);
+  border: 1px solid rgba(255, 138, 67, .55);
   border-radius: 50%;
   animation: breathe 5s ease-in-out infinite;
 }
 
-.signal-orbit::before,.signal-orbit::after {
+.signal-orbit::before, .signal-orbit::after {
   content: "";
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(244,241,233,.13);
+  border: 1px solid rgba(244, 241, 233, .13);
 }
 
 .signal-orbit::before {
@@ -271,23 +271,23 @@ a {
   border-radius: 50%;
   background: var(--white);
   color: var(--navy);
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size: clamp(34px,4vw,60px);
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: clamp(34px, 4vw, 60px);
   font-style: italic;
-  box-shadow: 0 18px 48px rgba(23,36,66,.25);
+  box-shadow: 0 18px 48px rgba(23, 36, 66, .25);
 }
 
 .signal-meta {
   align-self: stretch;
   padding-top: 24px;
-  border-top: 1px solid rgba(244,241,233,.15);
+  border-top: 1px solid rgba(244, 241, 233, .15);
   display: flex;
   justify-content: space-between;
   gap: 24px;
 }
 
 .status {
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: .12em;
@@ -307,7 +307,7 @@ a {
 .signal-meta p {
   margin: 0;
   text-align: right;
-  color: rgba(255,253,248,.56);
+  color: rgba(255, 253, 248, .56);
   font-size: 12px;
   line-height: 1.5;
 }
@@ -316,7 +316,7 @@ a {
 
 .principles {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid var(--line);
   background: var(--white);
 }
@@ -337,7 +337,7 @@ a {
 }
 
 .principles span {
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   color: var(--copper);
   font-size: 10px;
 }
@@ -345,7 +345,7 @@ a {
 /* Content sections */
 
 .section {
-  padding: 130px clamp(24px,7vw,110px);
+  padding: 130px clamp(24px, 7vw, 110px);
 }
 
 .work {
@@ -357,8 +357,8 @@ a {
 
 .section-heading h2 {
   margin: 0;
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size: clamp(47px,5vw,76px);
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: clamp(47px, 5vw, 76px);
   line-height: 1.04;
   letter-spacing: -.04em;
   font-weight: 400;
@@ -367,7 +367,7 @@ a {
 .section-lead {
   margin: 54px 0 0;
   max-width: 700px;
-  font-size: clamp(19px,2vw,27px);
+  font-size: clamp(19px, 2vw, 27px);
   line-height: 1.55;
   letter-spacing: -.02em;
   color: var(--ink-soft);
@@ -377,7 +377,7 @@ a {
   grid-column: 1/-1;
   margin-top: 110px;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--line);
 }
 
@@ -397,7 +397,7 @@ a {
 }
 
 .capability-index {
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 11px;
   color: var(--copper);
 }
@@ -449,10 +449,10 @@ a {
   place-items: center;
 }
 
-.ada-portrait::before,.ada-portrait::after {
+.ada-portrait::before, .ada-portrait::after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(224,154,114,.26);
+  border: 1px solid rgba(224, 154, 114, .26);
   transform: rotate(45deg);
 }
 
@@ -471,19 +471,19 @@ a {
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: radial-gradient(circle,rgba(22,169,197,.28),transparent 66%);
+  background: radial-gradient(circle, rgba(22, 169, 197, .28), transparent 66%);
 }
 
 .ada-portrait>span {
   z-index: 1;
-  font: italic 180px/.8 Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font: italic 180px/.8 Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   color: var(--paper);
-  text-shadow: 16px 16px 0 rgba(22,169,197,.2);
+  text-shadow: 16px 16px 0 rgba(22, 169, 197, .2);
 }
 
 .ada-copy h2 {
   margin: 0;
-  font: 400 clamp(58px,6vw,88px)/1 Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font: 400 clamp(58px, 6vw, 88px)/1 Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .ada-intro {
@@ -494,12 +494,12 @@ a {
 
 .ada-copy>p {
   max-width: 610px;
-  color: rgba(255,253,248,.65);
+  color: rgba(255, 253, 248, .65);
   font-size: 16px;
   line-height: 1.75;
 }
 
-.ada-copy>a,.privacy-content>a {
+.ada-copy>a, .privacy-content>a {
   display: inline-block;
   margin-top: 24px;
   padding-bottom: 5px;
@@ -543,7 +543,7 @@ a {
 }
 
 .privacy-content li span {
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   color: var(--ink);
   font-size: 10px;
   text-transform: uppercase;
@@ -561,7 +561,7 @@ a {
 /* Closing call to action */
 
 .closing {
-  padding: 110px clamp(24px,7vw,110px);
+  padding: 110px clamp(24px, 7vw, 110px);
   background: var(--copper);
   color: var(--white);
 }
@@ -573,7 +573,7 @@ a {
 .closing h2 {
   margin: 0;
   max-width: 1000px;
-  font: 400 clamp(48px,6vw,88px)/1.05 Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font: 400 clamp(48px, 6vw, 88px)/1.05 Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   letter-spacing: -.035em;
 }
 
@@ -595,12 +595,12 @@ a {
   text-align: right;
   font-size: 12px;
   line-height: 1.6;
-  color: rgba(11,24,48,.78);
+  color: rgba(11, 24, 48, .78);
 }
 
 footer {
   min-height: 120px;
-  padding: 30px clamp(24px,5vw,76px);
+  padding: 30px clamp(24px, 5vw, 76px);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: 30px;
@@ -673,7 +673,7 @@ footer a:hover {
   }
 
   .signal-orbit {
-    width: min(70vw,290px);
+    width: min(70vw, 290px);
   }
 
   .principles {
@@ -688,7 +688,7 @@ footer a:hover {
     border-bottom: 1px solid var(--line);
   }
 
-  .work,.privacy {
+  .work, .privacy {
     grid-template-columns: 1fr;
   }
 
@@ -729,7 +729,7 @@ footer a:hover {
   }
 
   .hero h1 {
-    font-size: clamp(48px,15vw,72px);
+    font-size: clamp(48px, 15vw, 72px);
   }
 
   .hero-actions {
@@ -756,7 +756,7 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
-  .capability,.capability+.capability {
+  .capability, .capability+.capability {
     min-height: 230px;
     padding: 28px 0;
     border-right: 0;
@@ -815,7 +815,7 @@ footer a:hover {
     scroll-behavior: auto;
   }
 
-  *,*::before,*::after {
+  *, *::before, *::after {
     animation-duration: .01ms!important;
     animation-iteration-count: 1!important;
     transition-duration: .01ms!important;
@@ -826,12 +826,12 @@ footer a:hover {
 /* Harmonized EVH Consult header and footer */
 
 body.nav-open {
-  overflow:hidden
+  overflow: hidden;
 }
 
 .site-container {
-  width: min(calc(100% - 40px),1180px);
-  margin-inline:auto
+  width: min(calc(100% - 40px), 1180px);
+  margin-inline: auto;
 }
 
 .sr-only {
@@ -841,9 +841,9 @@ body.nav-open {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border:0
+  border: 0;
 }
 
 .site-header {
@@ -853,9 +853,9 @@ body.nav-open {
   height: auto;
   padding: 0;
   display: block;
-  background: rgba(255,255,255,.94);
+  background: rgba(255, 255, 255, .94);
   border-bottom: 1px solid var(--line);
-  color:var(--ink)
+  color: var(--ink);
 }
 
 .header-inner {
@@ -863,7 +863,7 @@ body.nav-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap:28px
+  gap: 28px;
 }
 
 .site-header .brand {
@@ -871,7 +871,7 @@ body.nav-open {
   align-items: center;
   gap: 12px;
   margin-left: 0;
-  text-decoration:none
+  text-decoration: none;
 }
 
 .site-header .brand img {
@@ -879,46 +879,46 @@ body.nav-open {
   width: 196px;
   height: 64px;
   object-fit: cover;
-  object-position:center
+  object-position: center;
 }
 
 .brand-divider {
   width: 1px;
   height: 29px;
-  background:var(--line)
+  background: var(--line);
 }
 
 .brand-ai {
   color: var(--navy);
-  font-family: Inter,Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-family: Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 750;
-  letter-spacing:.16em
+  letter-spacing: .16em;
 }
 
 .site-header .site-nav {
   display: flex;
   align-items: center;
   gap: 26px;
-  font-size:14px
+  font-size: 14px;
 }
 
 .site-header .site-nav>a:not(.button) {
   color: #3a4855;
   font-size: .88rem;
   font-weight: 600;
-  text-decoration:none
+  text-decoration: none;
 }
 
 .site-header .site-nav>a:not(.button):hover {
-  color:var(--copper)
+  color: var(--copper);
 }
 
 .nav-toggle {
   display: none;
   padding: 8px;
   background: none;
-  border:0
+  border: 0;
 }
 
 .nav-toggle span:not(.sr-only) {
@@ -927,7 +927,7 @@ body.nav-open {
   height: 2px;
   margin: 5px;
   background: var(--navy);
-  transition:transform .2s,opacity .2s
+  transition: transform .2s, opacity .2s;
 }
 
 .button-small {
@@ -941,7 +941,7 @@ body.nav-open {
   border: 1px solid var(--navy);
   font-size: .9rem;
   font-weight: 700;
-  text-decoration:none
+  text-decoration: none;
 }
 
 .site-footer {
@@ -951,71 +951,71 @@ body.nav-open {
   background: #16234a;
   color: #b8c1dc;
   border-top: 0;
-  font-size:.82rem
+  font-size: .82rem;
 }
 
 .site-footer .footer-inner {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap:30px
+  gap: 30px;
 }
 
 .site-footer .footer-brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  width:max-content
+  width: max-content;
 }
 
 .site-footer .footer-brand img {
   display: block;
   width: 132px;
   height: 46px;
-  object-fit:contain
+  object-fit: contain;
 }
 
 .site-footer .footer-brand .brand-divider {
-  background:rgba(255,255,255,.22)
+  background: rgba(255, 255, 255, .22);
 }
 
 .site-footer .footer-brand .brand-ai {
-  color:#ff8a43
+  color: #ff8a43;
 }
 
 .site-footer .footer-inner p {
   margin: 0;
-  text-align:center
+  text-align: center;
 }
 
 .site-footer .footer-links {
   justify-self: end;
   display: flex;
   align-items: center;
-  gap:16px
+  gap: 16px;
 }
 
 .site-footer a:hover {
-  color:#ff8a43
+  color: #ff8a43;
 }
 
 @media(max-width:900px) {
   .nav-toggle {
     display: block;
     position: relative;
-    z-index:22
+    z-index: 22;
   }
 
   .nav-toggle[aria-expanded="true"] span:nth-of-type(2) {
-    transform:translateY(7px) rotate(45deg)
+    transform: translateY(7px) rotate(45deg);
   }
 
   .nav-toggle[aria-expanded="true"] span:nth-of-type(3) {
-    opacity:0
+    opacity: 0;
   }
 
   .nav-toggle[aria-expanded="true"] span:nth-of-type(4) {
-    transform:translateY(-7px) rotate(-45deg)
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .site-header .site-nav {
@@ -1032,44 +1032,44 @@ body.nav-open {
     visibility: hidden;
     pointer-events: none;
     transform: translateY(-12px);
-    transition:.2s
+    transition: .2s;
   }
 
   .site-header .site-nav.open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform:none
+    transform: none;
   }
 
   .site-header .site-nav>a:not(.button) {
-    font-size:1.25rem
+    font-size: 1.25rem;
   }
 
   .site-footer .footer-inner {
     grid-template-columns: 1fr;
     justify-items: center;
-    text-align:center
+    text-align: center;
   }
 
   .site-footer .footer-links {
-    justify-self:center
+    justify-self: center;
   }
 
 }
 
 @media(max-width:680px) {
   .site-container {
-    width:min(calc(100% - 32px),1180px)
+    width: min(calc(100% - 32px), 1180px);
   }
 
   .header-inner {
-    min-height:70px
+    min-height: 70px;
   }
 
   .site-footer .footer-links {
     flex-direction: column;
-    gap:12px
+    gap: 12px;
   }
 
 }
