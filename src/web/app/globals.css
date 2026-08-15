@@ -169,3 +169,8 @@ body.nav-open{overflow:hidden}
   .site-header{backdrop-filter:none;-webkit-backdrop-filter:none}
   .site-header .site-nav{min-height:100dvh}
 }
+
+
+/* Crop the transparent source canvas to the visible header artwork */
+.site-header .brand{margin-left:0}
+.site-header .brand img{width:196px;height:64px;object-fit:cover;object-position:center}
