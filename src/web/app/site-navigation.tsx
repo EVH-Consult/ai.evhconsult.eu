@@ -48,9 +48,10 @@ export default function SiteNavigation() {
       </button>
       <nav ref={navRef} className={`site-nav${open ? " open" : ""}`} id="site-nav" aria-label="Main navigation">
         <a href="#work" onClick={() => setOpen(false)}>What we explore</a>
-        <a href="#ada" onClick={() => setOpen(false)}>Meet Ada</a>
+        <a href="#ada" onClick={() => setOpen(false)}>About Ada</a>
         <a href="#privacy" onClick={() => setOpen(false)}>Privacy</a>
         <a href="https://evhconsult.eu" onClick={() => setOpen(false)}>EVH Consult</a>
+        <a href="https://ada.evhconsult.eu" onClick={() => setOpen(false)}>Ada</a>
         <a className="button button-small" href="mailto:ai@evhconsult.eu" onClick={() => setOpen(false)}>Contact</a>
       </nav>
     </>
