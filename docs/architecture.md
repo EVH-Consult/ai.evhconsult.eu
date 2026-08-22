@@ -1,10 +1,16 @@
 # Architectural principles
 
-This document records the initial architectural direction for `ai.evhconsult.eu`. It does not lock the project into a detailed implementation or a specific technology stack.
+This document records the architectural direction for `ai.evhconsult.eu`. It does not lock the project into unnecessary implementation detail or a specific AI provider.
+
+## Current deployment
+
+The public site is live at `https://ai.evhconsult.eu` and is deployed through Azure Static Web Apps from the `main` branch.
+
+The current application is a statically exported Next.js site in `src/web`. Static delivery remains the appropriate baseline while the public platform does not require backend state.
 
 ## Separation of concerns
 
-The architecture should maintain clear boundaries between:
+Future capabilities should maintain clear boundaries between:
 
 - the frontend;
 - backend and API functionality;
@@ -12,29 +18,41 @@ The architecture should maintain clear boundaries between:
 - data storage;
 - authentication and authorization.
 
-These boundaries should make individual components easier to evolve, replace, secure, and test.
+These boundaries exist to keep components easier to evolve, replace, secure, and test. They are not a reason to introduce distributed-system complexity before requirements justify it.
 
 ## Operating principles
 
-- Prefer managed services over maintaining virtual machines when they meet the project's requirements.
+- Prefer managed services over maintaining virtual machines when they meet the requirements.
 - Preserve portability where reasonable, especially around AI-provider integrations and application logic.
 - Keep secrets, credentials, tokens, keys, and connection strings outside source control.
 - Keep the public domain stable even if the underlying hosting platform or backend changes.
-- Split public and private components into separate repositories later if security, operational, or product requirements justify it.
-- Avoid coupling public code to private Ada context or confidential EVH Consult information.
+- Keep the public repository separated from private Ada context and confidential EVH Consult/client information.
+- Add backend/API, storage, authentication, uploads, or persistent user data only for concrete requirements.
+- Reassess privacy and security before introducing accounts, uploads, persistent conversations, or client-data processing.
 
-## Current website implementation
+## Web ecosystem boundary
 
-The first public website is a statically exported Next.js application in `src/web`. Static output keeps the first deployment simple and portable. Analytics is injected only when public deployment settings provide a domain and script URL; no tracking identifier is hard-coded.
+`ai.evhconsult.eu` is one of three distinct EVH Consult public properties:
 
-This implementation does not determine the future backend architecture.
+- `evhconsult.eu` — consulting/business presence;
+- `ai.evhconsult.eu` — AI/R&D and exploratory technical work;
+- `ada.evhconsult.eu` — Ada's public identity/home.
+
+The sites share cross-site conventions for branding, typography, navigation behaviour, and accessibility where appropriate, but remain independently deployable and retain separate canonical source repositories.
+
+## Repository and work-management boundaries
+
+- This repository is authoritative for the AI/R&D website implementation and public technical documentation.
+- Jira project `EVHC` tracks concrete work; `EVHC-4` is the current AI/R&D public-platform workstream.
+- Confluence records durable architecture and design rationale.
+- Ada's public identity and private persistent context remain in `EVHConsult-AI/ada` and `EVHConsult-AI/ada-context` respectively.
 
 ## Likely evolution
 
-The current likely path is:
+The current likely path remains:
 
-1. A static public site.
-2. A static site with serverless or API functionality.
-3. A potential dedicated backend using Azure App Service, Azure Container Apps, or another appropriate managed platform.
+1. Static public site.
+2. Static site plus narrowly scoped serverless/API functionality where needed.
+3. A dedicated backend only if requirements, security, operating cost, maintainability, and deployment characteristics justify one.
 
-This path is a direction for exploration, not a locked architectural decision. Actual requirements, security considerations, operating cost, maintainability, and portability will determine the implementation.
+This is a direction, not a commitment to increasing architectural complexity.
