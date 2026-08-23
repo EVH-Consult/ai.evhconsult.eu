@@ -107,7 +107,7 @@ export default function Home() {
             <span className="brand-ai">AI</span>
           </a>
           <p>© {new Date().getFullYear()} EVH Consult. Built in public, operated responsibly.</p>
-          <div className="footer-links"><a href="https://evhconsult.eu">EVH Consult</a><a href="https://ada.evhconsult.eu">Ada</a><a href="https://github.com/EVH-Consult/ai.evhconsult.eu">GitHub</a><a href="mailto:ai@evhconsult.eu">Contact</a></div>
+          <div className="footer-links"><a href="https://evhconsult.eu">EVH Consult</a><a href="https://ada.evhconsult.eu">Ada</a><a href="https://x.com/EVHConsultAI" aria-label="EVH Consult AI/R&D on X">X: EVH Consult AI/R&D</a><a href="https://github.com/EVH-Consult/ai.evhconsult.eu">GitHub</a><a href="mailto:ai@evhconsult.eu">Contact</a></div>
         </div>
       </footer>
     </main>
