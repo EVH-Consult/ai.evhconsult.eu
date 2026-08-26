@@ -1,6 +1,6 @@
 # Privacy and data-handling principles
 
-This document states the initial public privacy and data-handling principles for `ai.evhconsult.eu`. It is not a complete legal privacy policy. A formal policy will be prepared when the service's functionality and processing activities require one.
+This document records the public privacy and data-handling principles for `ai.evhconsult.eu`. Detailed website analytics and cookie information is maintained centrally for the EVH Consult web ecosystem at [evhconsult.eu/privacy.html](https://evhconsult.eu/privacy.html).
 
 ## Principles
 
@@ -12,20 +12,30 @@ This document states the initial public privacy and data-handling principles for
 - Document specific external AI providers and their processing arrangements before using them in production.
 - Evaluate privacy and security requirements before introducing user accounts, document uploads, persistent conversations, or client data.
 
-## Basic service measurement
+## Website analytics
 
-No dedicated audience-analytics provider or client-side analytics script is enabled.
+`ai.evhconsult.eu` participates in the shared EVH Consult Google Analytics 4 architecture together with `evhconsult.eu`, `ada.evhconsult.eu`, and `erwin.evhconsult.eu`.
 
-The project uses only the aggregate operational metrics already produced by Azure Static Web Apps as the hosting platform:
+Analytics is optional and treated as non-essential:
 
-- total site hits;
-- outgoing bytes;
-- site errors.
+- Google Analytics must not load or send requests before explicit analytics consent.
+- Refusing analytics must not affect access to the site.
+- The same consent choice is shared across `*.evhconsult.eu` using a strictly functional preference cookie retained for no more than six months.
+- Advertising-related consent states remain denied; this implementation is not used for advertising personalisation or remarketing.
+- Google Signals and User-ID are not used.
 
-These counters help determine whether the site is being reached and operating normally. They are request-level service metrics, not a count of unique people, and they do not provide referral sources, device profiles or visitor-level histories.
+After consent, measurement is limited to website/content effectiveness, regional/campaign effectiveness and successful contact-request measurement. EVH Consult must not intentionally send names, email addresses, phone numbers, message text, form-field values, CRM identifiers, hashed personal identifiers or another first-party identity to GA4.
 
-No audience-measurement cookies are set by this project. No separate analytics account receives the website's traffic data.
+Approximate regional/city and device/browser reporting is enabled for legitimate campaign and market analysis. It is used directionally and must not be treated as precise physical-location evidence about an individual visitor.
 
-See [`analytics.md`](analytics.md) for implementation details and limitations.
+GA4 event/user-level data is retained for 14 months. EVH Consult-controlled GA first-party cookies are configured for no more than 13 months from first creation.
 
-Any future expansion of measurement must be documented and evaluated before activation. This is especially important before adding accounts, uploads, conversations or client data.
+The implementation uses Google Consent Mode Basic: analytics remains denied until the visitor explicitly accepts it, and no pre-consent Google Analytics request is permitted.
+
+See [analytics.md](analytics.md) for the implementation boundary and the central [Privacy & cookie information](https://evhconsult.eu/privacy.html) for the visitor-facing notice.
+
+## Hosting metrics
+
+Azure Static Web Apps may still produce aggregate operational metrics as part of hosting, including site hits, outgoing bytes and service errors. These hosting counters are operational telemetry rather than the optional GA4 audience measurement described above.
+
+Any material expansion of analytics, advertising use, identity handling, retention, or data-processing purpose requires a new privacy/architecture decision before activation.
