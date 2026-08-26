@@ -67,7 +67,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <Script src="/consent.js" strategy="beforeInteractive" />\n        <Script src="/ga4.js" strategy="beforeInteractive" />
+        <Script src="/consent.js" strategy="beforeInteractive" />
+        <Script src="/ga4.js" strategy="beforeInteractive" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
