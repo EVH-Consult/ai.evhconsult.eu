@@ -6,6 +6,7 @@ export default function SiteNavigation() {
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const navRef = useRef<HTMLElement>(null);
+  const mobileBreakpoint = 1040;
 
   useEffect(() => {
     document.body.classList.toggle("nav-open", open);
@@ -30,7 +31,7 @@ export default function SiteNavigation() {
       }
     };
     const onResize = () => {
-      if (window.innerWidth > 900) setOpen(false);
+      if (window.innerWidth > mobileBreakpoint) setOpen(false);
     };
     document.addEventListener("keydown", onKeyDown);
     window.addEventListener("resize", onResize);

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import "./evhc-45-responsive.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai.evhconsult.eu"),
