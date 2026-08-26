@@ -75,18 +75,18 @@ export default function Home() {
 
       <section className="section privacy" id="privacy">
         <div className="section-heading">
-          <p className="eyebrow"><span /> Measured, minimally</p>
-          <h2>Useful signals.<br />No surveillance.</h2>
+          <p className="eyebrow"><span /> Consent first</p>
+          <h2>Useful signals.<br />No pre-consent tracking.</h2>
         </div>
         <div className="privacy-content">
-          <p>We use only the aggregate operational counters already produced by our Azure hosting platform. No separate audience analytics service is enabled.</p>
+          <p>Google Analytics 4 is used only after explicit analytics consent. Until then, no Google Analytics tag is loaded and no Analytics request is sent to Google.</p>
           <ul>
-            <li><span>Measured</span>Aggregate site hits, transferred bytes and service errors.</li>
-            <li><span>Not measured</span>Unique visitors, referral sources, device profiles, location, advertising identifiers or persistent visitor histories.</li>
-            <li><span>Browser tracking</span>No analytics script and no audience-measurement cookies.</li>
+            <li><span>Measured after consent</span>Aggregate page and content use, referral/campaign information, approximate region/city, device/browser information and successful contact-request measurement where applicable.</li>
+            <li><span>Not sent to GA4</span>Names, email addresses, phone numbers, message text, contact-form field values, CRM identifiers or User-ID.</li>
+            <li><span>Advertising</span>No advertising personalisation or remarketing. Advertising-related consent states remain denied.</li>
           </ul>
-          <p className="privacy-note">These basic service metrics show whether the site is being reached; they do not identify individual visitors.</p>
-          <a href="https://github.com/EVH-Consult/ai.evhconsult.eu/blob/main/docs/privacy.md">Read the data-handling principles ↗</a>
+          <p className="privacy-note">Refusing analytics does not affect access to this site. Your choice is shared across the EVH Consult web ecosystem and can be changed later through Cookie settings.</p>
+          <a href="https://evhconsult.eu/privacy.html">Read the privacy &amp; cookie information ↗</a>
         </div>
       </section>
 
