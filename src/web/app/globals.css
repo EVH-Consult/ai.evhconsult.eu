@@ -949,6 +949,8 @@ body.nav-open {
 
 .button-small {
   display: inline-flex;
+  width: 92px;
+  min-width: 92px;
   min-height: 42px;
   align-items: center;
   justify-content: center;
@@ -956,6 +958,7 @@ body.nav-open {
   background: var(--navy);
   color: #fff;
   border: 1px solid var(--navy);
+  border-radius: 4px;
   font-size: .9rem;
   font-weight: 700;
   text-decoration: none;

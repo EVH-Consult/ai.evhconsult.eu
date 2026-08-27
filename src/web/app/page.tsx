@@ -94,7 +94,7 @@ export default function Home() {
         <p className="eyebrow light"><span /> An EVH Consult initiative</p>
         <h2>Curious about what<br />responsible AI can do?</h2>
         <div>
-          <a className="button button-copper" href="mailto:ai@evhconsult.eu">Start a conversation ↗</a>
+          <a className="button button-copper" href="https://evhconsult.eu/contact.html?source=ai.evhconsult.eu&path=%2F">Start a conversation ↗</a>
           <p>Experiments first. Claims second.<br />Always accountable.</p>
         </div>
       </section>
@@ -106,7 +106,7 @@ export default function Home() {
             <span className="brand-divider" aria-hidden="true" />
             <span className="brand-ai">AI</span>
           </a>
-          <p>© 2026 EVH Consult</p><div className="footer-right"><nav className="footer-links" aria-label="Footer navigation"><a href="https://evhconsult.eu">EVH Consult</a><a href="https://ada.evhconsult.eu">Ada</a><a href="https://erwin.evhconsult.eu">Erwin</a><a href="https://github.com/EVH-Consult/ai.evhconsult.eu">GitHub</a><a href="mailto:ai@evhconsult.eu">Contact</a></nav><div className="footer-social" aria-label="EVH Consult AI/R&D social links"><a className="social-link" href="https://x.com/EVHConsultAI" aria-label="EVH Consult AI/R&D on X" title="EVH Consult AI/R&D on X">𝕏</a></div></div></div></footer>
+          <p>© 2026 EVH Consult</p><div className="footer-right"><nav className="footer-links" aria-label="Footer navigation"><a href="https://evhconsult.eu">EVH Consult</a><a href="https://ada.evhconsult.eu">Ada</a><a href="https://erwin.evhconsult.eu">Erwin</a><a href="https://github.com/EVH-Consult/ai.evhconsult.eu">GitHub</a><a href="https://evhconsult.eu/contact.html?source=ai.evhconsult.eu&path=%2F">Contact</a></nav><div className="footer-social" aria-label="EVH Consult AI/R&D social links"><a className="social-link" href="https://x.com/EVHConsultAI" aria-label="EVH Consult AI/R&D on X" title="EVH Consult AI/R&D on X">𝕏</a></div></div></div></footer>
     </main>
   );
 }
