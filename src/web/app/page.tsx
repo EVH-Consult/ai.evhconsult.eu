@@ -94,7 +94,7 @@ export default function Home() {
         <p className="eyebrow light"><span /> An EVH Consult initiative</p>
         <h2>Curious about what<br />responsible AI can do?</h2>
         <div>
-          <a className="button button-copper" href="https://evhconsult.eu/contact.html?source=ai.evhconsult.eu&path=%2F">Start a conversation ↗</a>
+
           <p>Experiments first. Claims second.<br />Always accountable.</p>
         </div>
       </section>
