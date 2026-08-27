@@ -54,7 +54,7 @@ export default function SiteNavigation() {
         <a href="https://evhconsult.eu" onClick={() => setOpen(false)}>EVH Consult</a>
         <a href="https://ada.evhconsult.eu" onClick={() => setOpen(false)}>Ada</a>
         <a href="https://erwin.evhconsult.eu" onClick={() => setOpen(false)}>Erwin</a>
-        <a className="button button-small" href="mailto:ai@evhconsult.eu" onClick={() => setOpen(false)}>Contact</a>
+        <a className="button button-small contact-cta" href="https://evhconsult.eu/contact.html?source=ai.evhconsult.eu&path=%2F" onClick={() => setOpen(false)}>Contact</a>
       </nav>
     </>
   );
