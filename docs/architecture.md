@@ -32,13 +32,18 @@ These boundaries exist to keep components easier to evolve, replace, secure, and
 
 ## Web ecosystem boundary
 
-`ai.evhconsult.eu` is one of three distinct EVH Consult public properties:
+`ai.evhconsult.eu` is one of four distinct EVH Consult public properties:
 
 - `evhconsult.eu` — consulting/business presence;
 - `ai.evhconsult.eu` — AI/R&D and exploratory technical work;
-- `ada.evhconsult.eu` — Ada's public identity/home.
+- `ada.evhconsult.eu` — Ada's public identity/home;
+- `erwin.evhconsult.eu` — Erwin Vanhecke's personal/professional public presence.
 
 The sites share cross-site conventions for branding, typography, navigation behaviour, and accessibility where appropriate, but remain independently deployable and retain separate canonical source repositories.
+
+## Shared contact and navigation convention
+
+Business contact is centralised at `https://evhconsult.eu/contact.html`. Every general contact action must pass the caller hostname in `source` and route path in `path`; no general-business `mailto:` action is retained on this site. The header Contact CTA uses the main-site geometry (92px × 42px, 4px radius) and the established responsive navigation behaviour. EVHC-59 wake-check invocation will be added only after its shared backend endpoint and telemetry contract are deployed; browser code must never obtain database credentials or direct SQL access.
 
 ## Repository and work-management boundaries
 
