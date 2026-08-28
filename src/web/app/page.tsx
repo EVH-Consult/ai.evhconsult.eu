@@ -90,14 +90,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="closing">
-        <p className="eyebrow light"><span /> An EVH Consult initiative</p>
-        <h2>Curious about what<br />responsible AI can do?</h2>
-        <div>
-
-          <p>Experiments first. Claims second.<br />Always accountable.</p>
-        </div>
-      </section>
 
       <footer className="site-footer">
         <div className="site-container footer-inner">
