@@ -43,7 +43,7 @@ The sites share cross-site conventions for branding, typography, navigation beha
 
 ## Shared contact and navigation convention
 
-Business contact is centralised at `https://evhconsult.eu/contact.html`. Every general contact action must pass the caller hostname in `source` and route path in `path`; no general-business `mailto:` action is retained on this site. The header Contact CTA uses the main-site geometry (92px × 42px, 4px radius) and the established responsive navigation behaviour. EVHC-59 wake-check invocation will be added only after its shared backend endpoint and telemetry contract are deployed; browser code must never obtain database credentials or direct SQL access.
+Business contact is centralised at `https://evhconsult.eu/contact.html`. The only visitor-facing contact actions are the header Contact CTA and footer Contact text link; both pass the caller hostname in `source` and route path in `path`. No general-business `mailto:` action is retained on this site. The header Contact CTA uses the main-site geometry (92px × 42px, 4px radius) and the established responsive navigation behaviour. EVHC-59 wake-check invocation will be added only after its shared backend endpoint and telemetry contract are deployed; browser code must never obtain database credentials or direct SQL access.
 
 ## Repository and work-management boundaries
 
