@@ -482,11 +482,14 @@ a {
   background: radial-gradient(circle, rgba(22, 169, 197, .28), transparent 66%);
 }
 
-.ada-portrait>span {
+.ada-avatar {
   z-index: 1;
-  font: italic 180px/.8 Inter, Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
-  color: var(--paper);
-  text-shadow: 16px 16px 0 rgba(22, 169, 197, .2);
+  display: block;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 16px 16px 0 rgba(22, 169, 197, .2);
 }
 
 .ada-copy h2 {
@@ -794,8 +797,9 @@ footer a:hover {
     height: 170px;
   }
 
-  .ada-portrait>span {
-    font-size: 130px;
+  .ada-avatar {
+    width: 160px;
+    height: 160px;
   }
 
   .privacy-content li {
