@@ -62,7 +62,7 @@ export default function Home() {
       </section>
 
       <section className="section ada" id="ada">
-        <div className="ada-portrait" aria-hidden="true"><div className="ada-aura" /><span>A</span></div>
+        <div className="ada-portrait"><div className="ada-aura" aria-hidden="true" /><img className="ada-avatar" src="/ada-avatar.png" alt="Ada, the EVH Consult AI persona" width={800} height={800} /></div>
         <div className="ada-copy">
           <p className="eyebrow light"><span /> Ada at EVH Consult</p>
           <h2>Meet Ada.</h2>
