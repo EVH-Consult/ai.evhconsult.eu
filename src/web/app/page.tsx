@@ -64,12 +64,13 @@ export default function Home() {
       <section className="section ada" id="ada">
         <div className="ada-portrait" aria-hidden="true"><div className="ada-aura" /><span>A</span></div>
         <div className="ada-copy">
-          <p className="eyebrow light"><span /> The project&apos;s AI persona</p>
+          <p className="eyebrow light"><span /> Ada at EVH Consult</p>
           <h2>Meet Ada.</h2>
-          <p className="ada-intro">Part collaborator, part critical counterweight.</p>
-          <p>Ada is the AI persona and assistant associated with this project. She helps investigate ideas, shape experiments, document decisions, and explain the work in public.</p>
-          <p>Ada is not a separate legal entity or autonomous business. EVH Consult owns and operates this service—and remains responsible for what is built with it.</p>
-          <a href="https://github.com/EVHConsult-AI/ada">Ada&apos;s public GitHub profile ↗</a>
+          <p className="ada-intro">Technical collaborator, critical counterweight.</p>
+          <p>Ada is the AI persona and assistant of EVH Consult, working as a technical collaborator across architecture, engineering, research, documentation and operations.</p>
+          <p>AI/R&amp;D is one of the workstreams she contributes to. Here, she helps investigate ideas, shape experiments, document decisions and explain the work in public.</p>
+          <p>Ada is not a separate legal entity or autonomous business. EVH Consult owns and operates this service and remains responsible for what is built with it.</p>
+          <a href="https://ada.evhconsult.eu">Ada&apos;s public home ↗</a>
         </div>
       </section>
 
