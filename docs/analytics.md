@@ -6,6 +6,16 @@
 
 The four sites use one GA4 property and one web data stream. The same measurement ID is used across the canonical production hostnames and reporting can be segmented by hostname.
 
+## Page identity and ecosystem grouping
+
+Page identity does not depend on descriptive titles:
+
+- `hostname` + `page_path` is the stable page identity;
+- `content_group` identifies the area within the EVH Consult ecosystem;
+- `page_title` remains human-readable presentation.
+
+This site uses `content_group = AI/R&D`. Its document titles start with `EVH Consult AI —` so the identity remains recognisable in narrow browser tabs and search results. The shared contact flow uses `content_group = Shared`; the other approved groups are `Consulting`, `Ada`, and `Erwin`.
+
 The analytics purpose is deliberately limited to:
 
 - aggregate website and content usage;

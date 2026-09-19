@@ -5,8 +5,8 @@ import "./evhc-45-responsive.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai.evhconsult.eu"),
-  applicationName: "AI at EVH Consult",
-  title: "AI at EVH Consult",
+  applicationName: "EVH Consult AI",
+  title: "EVH Consult AI — Practical AI/R&D",
   description: "EVH Consult's public space for practical, portable and responsible AI experimentation.",
   alternates: { canonical: "/" },
   robots: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    title: "AI at EVH Consult",
+    title: "EVH Consult AI — Practical AI/R&D",
     description: "EVH Consult's public space for practical, portable and responsible AI experimentation.",
-    siteName: "AI at EVH Consult",
+    siteName: "EVH Consult AI",
     images: [
       {
         url: "/social-card.png",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI at EVH Consult",
+    title: "EVH Consult AI — Practical AI/R&D",
     description: "EVH Consult's public space for practical, portable and responsible AI experimentation.",
     images: ["/social-card.png"],
   },
@@ -54,7 +54,7 @@ const structuredData = {
     {
       "@type": "WebSite",
       "@id": "https://ai.evhconsult.eu/#website",
-      name: "AI at EVH Consult",
+      name: "EVH Consult AI",
       url: "https://ai.evhconsult.eu/",
       description: "EVH Consult's public space for practical, portable and responsible AI experimentation.",
       publisher: { "@id": "https://evhconsult.eu/#organization" },
