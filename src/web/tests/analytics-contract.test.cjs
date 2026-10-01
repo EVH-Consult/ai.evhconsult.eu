@@ -25,3 +25,15 @@ test("documents page identity separately from presentation", () => {
   assert.match(docs, /EVH Consult ecosystem/);
   assert.doesNotMatch(docs, /EVH ecosystem/);
 });
+
+test("Cookie settings exposes the stored choice through native disabled controls", () => {
+  const consent = readFileSync(path.join(root, "public", "consent.js"), "utf8");
+  const consentStyles = readFileSync(path.join(root, "public", "consent.css"), "utf8");
+
+  assert.match(consent, /id="evh-consent-status"[^>]*aria-live="polite"/);
+  assert.match(consent, /aria-describedby="evh-consent-status"/);
+  assert.match(consent, /acceptButton\.disabled = choice === 'granted'/);
+  assert.match(consent, /refuseButton\.disabled = choice === 'denied'/);
+  assert.match(consentStyles, /button:disabled/);
+  assert.match(consentStyles, /cursor:\s*not-allowed/);
+});
